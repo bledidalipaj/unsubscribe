@@ -27,7 +27,7 @@ def home():
             
     return render_template('unsubscribe.html')
 
-    
-app.run(host=HOST, port=PORT)
+
+
 if __name__ == '__main__':
-    app.run(debug=True)
+   app.run(host=HOST, port=PORT, debug=True)
