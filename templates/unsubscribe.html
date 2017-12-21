@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    <h1>
+        Unsubscribe from 
+        <a href="https://www.icodecon.com" target="_blank">
+            <abbr title="Internation Conference Of Development And Economy">ICODECON</abbr>
+        </a>
+        mailing list.
+    </h1>
+    <form action="{{ url_for('home') }}" method="POST">
+        <input type="email" name="email" placeholder="Please insert your email ">
+        <input type="submit" value="Submit">
+    </form>
+{% endblock %}
