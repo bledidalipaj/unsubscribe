@@ -93,7 +93,7 @@ iput[type="submit"]:focus {
 }
 
 .error {
-    border-bottom: 1px solid #6E0E0A !important;
+    border-bottom: 1px solid #FF0000 !important;
 }
 
 /* Media Queries */
