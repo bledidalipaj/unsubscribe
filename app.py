@@ -14,18 +14,24 @@ def unsubscribe():
 
 @app.route('/', methods=['GET', 'POST'])
 def home():
+    error = None
+    
     if request.method == 'POST':
         email = request.form.get('email')
         
-        # add email to mails.txt
-        with open('mails.txt', 'a') as f:
-            date = datetime.datetime.now().strftime('%d %B %Y')
+        # if email is not empty
+        if email:
+            # add email to mails.txt
+            with open('mails.txt', 'a') as f:
+                date = datetime.datetime.now().strftime('%d %B %Y')
             
-            f.write('{} {}\n'.format(date, email))
+                f.write('{} {}\n'.format(date, email))
         
-        return redirect(url_for('unsubscribe'))
+            return redirect(url_for('unsubscribe'))
+        else:
+            error = 'Email field can not be empty!'
             
-    return render_template('unsubscribe.html')
+    return render_template('unsubscribe.html', error=error)
 
 
 

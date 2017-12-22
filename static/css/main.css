@@ -92,6 +92,9 @@ iput[type="submit"]:focus {
     outline: none;
 }
 
+.error {
+    border-bottom: 1px solid #6E0E0A !important;
+}
 
 /* Media Queries */
 
